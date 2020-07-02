@@ -1,3 +1,8 @@
+sudo yum install -y  pcp pcp-gui pcp-system-tools pcp-doc
+sudo systemctl enable pmcd
+sudo  systemctl start pmcd
+sudo pcp atop
+
 # system load:
 uptime
 
