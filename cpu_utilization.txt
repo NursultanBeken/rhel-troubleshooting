@@ -1,0 +1,40 @@
+yum provides iostat
+
+# show only cpu report
+iostat -c
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          22.97    0.00    4.31    0.01    0.00   72.71
+
+if %iowait is high then could be an issue
+
+%user Show the percentage of CPU utilization that occurred while executing at the user level (application).
+%nice Show the percentage of CPU utilization that occurred while executing at the user level with nice priority.
+%system Show the percentage of CPU utilization that occurred while executing at the system level (kernel).
+%iowait Show the percentage of time that the CPU or CPUs were idle during which the system had an outstanding disk I/O request.
+%steal Show the percentage of time spent in involuntary wait by the virtual CPU or CPUs while the hypervisor was servicing another virtual processor.
+%idle Show the percentage of time that the CPU or CPUs were idle and the system did not have an outstanding disk I/O request.
+
+# show only cpu report
+iostat -c
+
+
+### SAR
+# enable sar
+systemctl status sysstat
+
+# log location 
+/var/log/sa/
+
+# cron location for sar
+/etc/cron.d/sysstat
+
+#info about device
+sar -d
+sar -b
+
+# info about network
+sar -n DEV
+
+#pull info from file
+sar -f /var/log/sa/sa1
