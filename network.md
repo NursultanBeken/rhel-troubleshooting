@@ -20,3 +20,5 @@ network - ip, ipspec - verify adresing and routing configuration, bandwidth and 
 data link - ethernet, vlan - verify switch and VLAN configurations + IP conflicts
 physical - ethernet physical
 
+Address Resolution Protocol (ARP)
+> ip n
